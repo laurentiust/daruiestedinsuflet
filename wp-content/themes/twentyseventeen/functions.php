@@ -584,3 +584,9 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+function change_front_page_panel_numbers( $number ) {
+  return 6; //default is 4
+}
+add_filter( 'twentyseventeen_front_page_sections', 'change_front_page_panel_numbers' );
